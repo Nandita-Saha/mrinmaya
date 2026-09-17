@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Browse all handcrafted clay home decor, utensils, jewelry and earthen pots from Mrinmaya.">
+  <title>All Products | Mrinmaya</title>
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&amp;family=Libre+Baskerville:wght@400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/products.css">
+  <link rel="stylesheet" href="css/inner-pages.css">
+  <link rel="stylesheet" href="css/cart-drawer.css">
+  <script src="js/store.js" defer></script>
+  <script src="js/inner-header.js" defer></script>
+  <script src="js/products.js" defer></script>
+  <script src="js/cart-drawer.js" defer></script>
+</head>
+<body class="catalog-page">
+  <header data-inner-header data-active="products"></header>
+
+  <main>
+    <section class="catalog-hero">
+      <p class="eyebrow">Our collection</p>
+      <h1>All Products</h1>
+      <p>Thoughtful pieces shaped by skilled artisans and made for everyday living.</p>
+    </section>
+
+    <div class="catalog-layout">
+      <aside class="catalog-sidebar" aria-label="Product filters">
+        <div class="filter-heading"><h2>Filters</h2><button type="button" id="clear-filters">Clear</button></div>
+        <label class="catalog-search">Search products<input id="catalog-search" type="search" placeholder="Search by name…"></label>
+        <fieldset>
+          <legend>Categories</legend>
+          <label><input type="radio" name="category" value="" checked> All Products <span>6</span></label>
+          <label><input type="radio" name="category" value="Home Decor"> Home Decor <span>2</span></label>
+          <label><input type="radio" name="category" value="Utensils"> Utensils <span>1</span></label>
+          <label><input type="radio" name="category" value="Clay Jewelry"> Clay Jewelry <span>2</span></label>
+          <label><input type="radio" name="category" value="Earthen Pots"> Earthen Pots <span>1</span></label>
+        </fieldset>
+        <fieldset>
+          <legend>Price</legend>
+          <label><input type="radio" name="price" value="" checked> All prices</label>
+          <label><input type="radio" name="price" value="under-600"> Under ₹600</label>
+          <label><input type="radio" name="price" value="600-900"> ₹600–₹900</label>
+          <label><input type="radio" name="price" value="over-900"> Above ₹900</label>
+        </fieldset>
+      </aside>
+
+      <section class="catalog-results" aria-labelledby="results-title">
+        <div class="catalog-results__bar"><h2 id="results-title">Handcrafted Collection</h2><p id="results-count" aria-live="polite"></p></div>
+        <div class="catalog-grid" id="catalog-grid"></div>
+        <p class="catalog-empty" id="catalog-empty" hidden>No products match these filters.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="catalog-footer"><p>© 2024 Mrinmaya. Handcrafted with care.</p><a href="index.html">Return to home</a></footer>
+</body>
+</html>

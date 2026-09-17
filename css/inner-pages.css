@@ -1,0 +1,69 @@
+.catalog-header {
+  position: sticky;
+  top: 0;
+  z-index: 70;
+  border-bottom: 1px solid #dfd3c5;
+  background: rgba(252, 248, 241, .97);
+  backdrop-filter: blur(12px);
+}
+
+.catalog-header__inner {
+  display: flex;
+  align-items: center;
+  width: min(1380px, calc(100% - 64px));
+  min-height: 84px;
+  margin: auto;
+  gap: 38px;
+}
+
+.catalog-logo { display: block; width: 112px; flex: 0 0 112px; }
+.catalog-logo img { display: block; width: 104px; height: 72px; object-fit: contain; }
+.catalog-header nav { display: flex; align-items: center; gap: clamp(20px, 2.4vw, 38px); margin-left: auto; }
+.catalog-header nav a { padding: 10px 0; color: #34251b; white-space: nowrap; text-decoration: none; }
+.catalog-header nav a:hover,
+.catalog-header nav a.active { color: #aa4f2b; text-decoration: underline; text-decoration-color: #aa4f2b; text-underline-offset: 6px; }
+
+.catalog-cart {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  color: #34251b;
+  cursor: pointer;
+}
+
+.catalog-cart svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.catalog-cart span { position: absolute; top: -2px; right: -3px; display: grid; place-items: center; min-width: 21px; height: 21px; padding: 0 4px; border-radius: 99px; background: #4e817b; color: #fff; font-size: .72rem; }
+
+.inner-banner {
+  display: grid;
+  place-items: center;
+  min-height: 330px;
+  padding: 54px 24px;
+  background: linear-gradient(#2d1609a3, #2d1609a3), url('../images/inner-banner-terracotta-generated.png') center / cover;
+  color: #fff9ed;
+  text-align: center;
+}
+
+.inner-banner__content { width: min(760px, 100%); }
+.inner-banner .eyebrow { color: #d4ba90; font-size: .76rem; font-weight: 700; letter-spacing: .27em; text-transform: uppercase; }
+.inner-banner h1 { margin: 7px 0 12px; color: #fff9ed; font-size: clamp(3rem, 6vw, 5.5rem); line-height: .95; }
+.inner-banner p:last-child { max-width: 680px; margin-inline: auto; color: #ece4d7; }
+.inner-page .checkout-shell { padding-top: clamp(42px, 6vw, 76px); }
+.inner-page .process-page-grid article > img { display: block; width: 100%; aspect-ratio: 16 / 9; margin-bottom: 20px; border-radius: 12px; object-fit: cover; }
+.inner-page .thank-you h2 { font-size: clamp(2rem, 4vw, 3.2rem); }
+
+@media (max-width: 1050px) {
+  .catalog-header nav { display: none; }
+  .catalog-cart { margin-left: auto; }
+}
+
+@media (max-width: 760px) {
+  .catalog-header__inner { width: min(100% - 32px, 620px); min-height: 76px; }
+  .catalog-logo { width: 94px; flex-basis: 94px; }
+  .catalog-logo img { width: 90px; height: 62px; }
+  .inner-banner { min-height: 270px; padding-block: 44px; }
+}

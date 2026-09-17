@@ -23,7 +23,7 @@ function renderCart() {
   const panel = byId('cart-items'); const summary = byId('cart-summary');
   panel.replaceChildren();
   if (!items.length) {
-    panel.innerHTML = '<div class="empty-cart"><h2>Your cart is waiting for a story.</h2><p>Choose a handcrafted piece to begin.</p><a class="button" href="index.html#products">Explore products</a></div>';
+    panel.innerHTML = '<div class="empty-cart"><h2>Your cart is waiting for a story.</h2><p>Choose a handcrafted piece to begin.</p><a class="button" href="products.html">Explore products</a></div>';
     summary.hidden = true; return;
   }
   items.forEach((item) => {

@@ -80,12 +80,6 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .hero p { max-width: 590px; margin-top: 16px; line-height: 1.5; }
 .hero-buttons { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 22px; }
 .hero-buttons .button { min-height: 50px; padding: 12px 24px; }
-.hero-buttons .play-icon { width: 23px; height: 23px; }
-.hero-play { position: absolute; left: 50%; top: 47.5%; transform: translate(-50%, -50%); border: 0; padding: 0; background: transparent; color: #fff8eb; display: grid; justify-items: center; gap: 8px; }
-.play-disc { display: grid; place-items: center; width: 58px; height: 58px; border: 2px solid #fff7e9; border-radius: 50%; background: #61452de0; box-shadow: 0 3px 12px #0002; }
-.play-disc::after { content: ''; display: block; margin-left: 5px; width: 0; height: 0; border-top: 10px solid transparent; border-bottom: 10px solid transparent; border-left: 16px solid #fff8ed; }
-.hero-play .play-disc { width: clamp(72px, 6.8vw, 112px); height: clamp(72px, 6.8vw, 112px); background: #634a39; }
-.hero-play > span:last-child { padding: 2px 10px; background: #32261ce6; border-radius: 3px; }
 .hero .hero-values { position: absolute; right: 3%; bottom: 2%; margin: 0; padding: 6px 12px; background: #2b2119; line-height: 1.4; }
 .hero-values span { margin-inline: 10px; }
 
@@ -115,7 +109,6 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .process-card { display: block; position: relative; padding: 0; overflow: hidden; border: 1px solid #b9afa1; border-radius: 5px; background: #302015; color: #fff9ef; text-align: left; }
 .process-card video { display: block; width: 100%; aspect-ratio: 196 / 102; object-fit: cover; transition: transform .3s; }
 .process-card:hover video, .about-video:hover video { transform: scale(1.035); }
-.process-card .play-disc { position: absolute; left: 50%; top: 47%; transform: translate(-50%, -50%); }
 .process-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 9px 12px; background: #241b14f5; line-height: 1.4; }
 
 /* Story section */
@@ -127,7 +120,6 @@ svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width:
 .about-copy > p:not(.eyebrow) { margin: 16px 0 22px; }
 .about-video { display: block; position: relative; overflow: hidden; padding: 0; width: 100%; border: 1px solid #9a8874; border-radius: 5px; background: #302015; color: #fff9ef; box-shadow: 0 5px 15px #3826181c; text-align: left; }
 .about-video video { display: block; width: 100%; aspect-ratio: 332 / 225; object-fit: cover; transition: transform .3s; }
-.about-video .play-disc { position: absolute; width: 76px; height: 76px; left: 50%; top: 49%; transform: translate(-50%, -50%); }
 .about-video-caption { position: absolute; bottom: 0; left: 0; right: 0; display: flex; align-items: center; gap: 10px; min-height: 62px; padding: 13px 18px; background: #2d271ff5; line-height: 1.4; }
 .craft-values { display: grid; gap: 22px; }
 .craft-value { display: flex; align-items: center; gap: 13px; line-height: 1.4; }
@@ -187,21 +179,6 @@ textarea { display: block; min-height: 96px; resize: vertical; }
 .footer-message .handwritten { transform: rotate(-7deg); }
 .copyright { margin-top: 24px; color: #c6c6b8; }
 
-/* Existing dialogs and cart */
-dialog { width: min(520px, calc(100% - 32px)); max-height: 85dvh; border: 1px solid var(--line); border-radius: 8px; padding: 32px; color: var(--ink); background: var(--paper); box-shadow: 0 15px 70px #0004; }
-dialog::backdrop { background: #211a13a6; }
-body:has(dialog[open]) { overflow: hidden; }
-.dialog-close { position: absolute; right: 8px; top: 8px; font-size: 2rem; }
-dialog h2 { padding-right: 24px; margin-bottom: 20px; }
-#dialog-body > p + p { margin-top: 16px; }
-#dialog-body > img { width: 100%; border-radius: 4px; margin-bottom: 20px; }
-.cart-item { display: flex; align-items: center; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
-.cart-item img { width: 80px; border-radius: 4px; }
-.cart-item-info { flex: 1; min-width: 0; }
-.cart-item h3 { margin-bottom: 8px; }
-.cart-item button { min-width: 40px; min-height: 40px; border: 1px solid var(--line); border-radius: 4px; background: transparent; color: var(--ink); }
-.cart-quantity { display: flex; align-items: center; gap: 12px; }
-.cart-note { margin-top: 20px; color: var(--muted); }
 .toast { position: fixed; bottom: 24px; left: 50%; z-index: 20; transform: translate(-50%, 20px); width: max-content; max-width: calc(100% - 32px); padding: 14px 22px; border-radius: 5px; background: var(--olive); color: #fff; opacity: 0; pointer-events: none; text-align: center; transition: opacity .2s, transform .2s; }
 .toast.visible { opacity: 1; transform: translate(-50%, 0); }
 
@@ -278,8 +255,6 @@ dialog h2 { padding-right: 24px; margin-bottom: 20px; }
   .hero p { margin-top: 20px; }
   .hero-buttons { gap: 12px; margin-top: 24px; }
   .hero-buttons .button { padding-inline: 18px; }
-  .hero-play { top: 20%; left: 50%; }
-  .hero-play .play-disc { width: 72px; height: 72px; }
   .desktop-break { display: none; }
   .section-heading { align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 22px; }
   .section-heading > p { width: 100%; }
@@ -291,8 +266,6 @@ dialog h2 { padding-right: 24px; margin-bottom: 20px; }
   .category-card > img { aspect-ratio: 1.75; }
   .process-card video { aspect-ratio: 1.5; }
   .process-caption { min-height: 62px; padding: 9px 10px; display: flex; align-items: center; }
-  .process-card .play-disc { top: 35%; width: 48px; height: 48px; }
-  .play-disc::after { border-top-width: 8px; border-bottom-width: 8px; border-left-width: 13px; }
   .about-layout { grid-template-columns: 1fr; gap: 28px; }
   .about-section { background-size: auto 40%; background-position: left top; }
   .about-video video { aspect-ratio: 332 / 210; }
@@ -321,16 +294,13 @@ dialog h2 { padding-right: 24px; margin-bottom: 20px; }
   .header-actions .icon-button { width: 40px; }
   .hero, .hero-inner { min-height: 660px; }
   .hero-buttons { flex-direction: column; align-items: stretch; }
-  .hero-play { top: 17%; }
   .category-grid, .product-grid, .process-grid { grid-template-columns: 1fr; }
   .category-card > div { display: flex; }
   .product-info h3 { min-height: 0; }
   .process-card video { aspect-ratio: 196 / 102; }
-  .process-card .play-disc { top: 45%; }
   .process-caption { min-height: 44px; }
   .input-row { grid-template-columns: 1fr; }
   .contact-form > .button { width: 100%; }
-  dialog { padding: 28px 20px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
@@ -397,12 +367,6 @@ body.motion-ready .is-visible .footer-inner > *:nth-child(1) { transition-delay:
 body.motion-ready .is-visible .footer-inner > *:nth-child(2) { transition-delay: .2s; }
 body.motion-ready .is-visible .footer-inner > *:nth-child(3) { transition-delay: .32s; }
 body.motion-ready .is-visible .footer-inner > *:nth-child(4) { transition-delay: .44s; }
-.cart-page-link { margin-top: 18px; }
-dialog { width: min(94vw, 1280px); max-width: 1280px; max-height: 92vh; padding: clamp(24px, 3vw, 44px); overflow: auto; }
-#dialog-body > video { display: block; width: 100%; max-width: 1180px; height: min(72vh, 760px); margin: 0 auto 20px; object-fit: contain; object-position: center; background: #201a15; border-radius: 6px; }
-#dialog-body > video + p { max-width: 900px; margin-inline: auto; }
-dialog:has(#dialog-body > video) { background: #fcfaf7; }
-@media (max-width: 680px) { dialog { width: calc(100vw - 20px); max-height: 94vh; padding: 24px 14px 18px; } #dialog-body > video { height: 62vh; } }
 @media (prefers-reduced-motion: reduce) {
   body.motion-ready main > section, body.motion-ready .site-footer, body.motion-ready .hero-copy > *, body.motion-ready .hero-play, body.motion-ready .hero-values, body.motion-ready .category-card, body.motion-ready .product-card, body.motion-ready .process-card, body.motion-ready .about-copy, body.motion-ready .about-video, body.motion-ready .craft-value, body.motion-ready .faq-list, body.motion-ready .contact-method, body.motion-ready .contact-form, body.motion-ready .footer-inner > * { opacity: 1; transform: none; }
 }

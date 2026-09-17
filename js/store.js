@@ -9,7 +9,7 @@ window.MrinmayaStore = (() => {
     bowl: { id: 'bowl', name: 'Terracotta Bowl', category: 'Utensils', price: 520, image: 'images/terracotta-bowl.png', alt: 'Handmade terracotta bowl' },
     necklace: { id: 'necklace', name: 'Clay Necklace', category: 'Clay Jewelry', price: 1180, image: 'images/clay-necklace.png', alt: 'Terracotta clay necklace' },
     pot: { id: 'pot', name: 'Earthen Pot', category: 'Earthen Pots', price: 760, image: 'images/earthen-pot.png', alt: 'Rounded handmade earthen pot with a lid' },
-    earrings: { id: 'earrings', name: 'Handmade Earrings', category: 'Clay Jewelry', price: 580, image: 'images/handmade-earrings.png', alt: 'Handmade circular terracotta earrings' }
+    earrings: { id: 'earrings', name: 'Handmade Earrings', category: 'Clay Jewelry', price: 560, image: 'images/handmade-earrings.png', alt: 'Handmade circular terracotta earrings' }
   };
   const read = (key, fallback) => { try { return JSON.parse(localStorage.getItem(key)) || fallback; } catch { return fallback; } };
   const getCart = () => read(CART_KEY, []).filter((item) => catalog[item.id] && Number.isInteger(item.quantity) && item.quantity > 0);
